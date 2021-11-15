@@ -7,7 +7,7 @@ using Xamarin.Forms;
 namespace AppFlyout.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class ItemDetailViewModel : BaseViewModel
+    public class ItemDetailViewModel : BaseViewModel 
     {
         private string itemId;
         private string text;
