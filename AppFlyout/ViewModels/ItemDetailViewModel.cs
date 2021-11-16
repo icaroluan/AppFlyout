@@ -10,20 +10,28 @@ namespace AppFlyout.ViewModels
     public class ItemDetailViewModel : BaseViewModel 
     {
         private string itemId;
-        private string text;
-        private string description;
+        private string nome;
+        private string sipnose;
+        private string ano;
+
         public string Id { get; set; }
 
-        public string Text
+        public string Nome
         {
-            get => text;
-            set => SetProperty(ref text, value);
+            get => nome;
+            set => SetProperty(ref nome, value);
         }
 
-        public string Description
+        public string Sinopse
         {
-            get => description;
-            set => SetProperty(ref description, value);
+            get => sipnose;
+            set => SetProperty(ref sipnose, value);
+        }
+
+        public string Ano
+        {
+            get => ano;
+            set => SetProperty(ref ano, value);
         }
 
         public string ItemId
@@ -45,8 +53,9 @@ namespace AppFlyout.ViewModels
             {
                 var item = await DataStore.GetItemAsync(itemId);
                 Id = item.Id;
-                Text = item.Text;
-                Description = item.Description;
+                Nome = item.Nome;
+                Sinopse = item.Sinopse;
+                Ano = item.Ano;
             }
             catch (Exception)
             {

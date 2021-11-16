@@ -5,7 +5,8 @@ namespace AppFlyout.Models
     public class Item
     {
         public string Id { get; set; }
-        public string Text { get; set; }
-        public string Description { get; set; }
+        public string Nome { get; set; }
+        public string Sinopse { get; set; }
+        public string Ano { get; set; }
     }
 }

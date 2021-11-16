@@ -9,8 +9,9 @@ namespace AppFlyout.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {
-        private string text;
-        private string description;
+        private string nome;
+        private string sinopse;
+        private string ano;
 
         public NewItemViewModel()
         {
@@ -22,20 +23,27 @@ namespace AppFlyout.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+            return !String.IsNullOrWhiteSpace(nome)
+                && !String.IsNullOrWhiteSpace(sinopse)
+                && !String.IsNullOrWhiteSpace(ano);
         }
 
-        public string Text
+        public string Nome
         {
-            get => text;
-            set => SetProperty(ref text, value);
+            get => nome;
+            set => SetProperty(ref nome, value);
         }
 
-        public string Description
+        public string Sinopse
         {
-            get => description;
-            set => SetProperty(ref description, value);
+            get => sinopse;
+            set => SetProperty(ref sinopse, value);
+        }
+
+        public string Ano
+        {
+            get => ano;
+            set => SetProperty(ref ano, value);
         }
 
         public Command SaveCommand { get; }
@@ -52,8 +60,9 @@ namespace AppFlyout.ViewModels
             Item newItem = new Item()
             {
                 Id = Guid.NewGuid().ToString(),
-                Text = Text,
-                Description = Description
+                Nome = Nome,
+                Sinopse = Sinopse,
+                Ano = Ano
             };
 
             await DataStore.AddItemAsync(newItem);
