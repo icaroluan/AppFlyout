@@ -13,6 +13,7 @@ namespace AppFlyout.ViewModels
         private string nome;
         private string sipnose;
         private string ano;
+        private Int32 qtdOscars;
 
         public string Id { get; set; }
 
@@ -32,6 +33,12 @@ namespace AppFlyout.ViewModels
         {
             get => ano;
             set => SetProperty(ref ano, value);
+        }
+
+        public Int32 QtdOscars
+        {
+            get => qtdOscars;
+            set => SetProperty(ref qtdOscars, value);
         }
 
         public string ItemId
@@ -56,6 +63,7 @@ namespace AppFlyout.ViewModels
                 Nome = item.Nome;
                 Sinopse = item.Sinopse;
                 Ano = item.Ano;
+                QtdOscars = item.QtdOscars;
             }
             catch (Exception)
             {

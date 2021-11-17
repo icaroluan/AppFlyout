@@ -14,7 +14,9 @@
             <Editor Text="{Binding Sinopse, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
             <Label Text="Ano" FontSize="Medium" />
             <Editor Text="{Binding Ano, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <StackLayout Orientation="Horizontal">
+			<Label Text="Quantidade de Oscars" FontSize="Medium" />
+			<Editor Text="{Binding QtdOscars, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+			<StackLayout Orientation="Horizontal">
                 <Button Text="Cancelar" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Salvar" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
             </StackLayout>

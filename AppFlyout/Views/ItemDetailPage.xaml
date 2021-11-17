@@ -11,6 +11,8 @@
         <Label Text="{Binding Sinopse}" FontSize="Small"/>
         <Label Text="Ano:" FontSize="Medium" />
         <Label Text="{Binding Ano}" FontSize="Small"/>
-    </StackLayout>
+		<Label Text="Quantidade de Oscars:" FontSize="Medium" />
+		<Label Text="{Binding QtdOscars}" FontSize="Small"/>
+	</StackLayout>
     
 </ContentPage>

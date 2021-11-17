@@ -12,6 +12,7 @@ namespace AppFlyout.ViewModels
         private string nome;
         private string sinopse;
         private string ano;
+        private Int32 qtdOscars;
 
         public NewItemViewModel()
         {
@@ -46,6 +47,12 @@ namespace AppFlyout.ViewModels
             set => SetProperty(ref ano, value);
         }
 
+        public Int32 QtdOscars
+        {
+            get => qtdOscars;
+            set => SetProperty(ref qtdOscars, value);
+        }
+
         public Command SaveCommand { get; }
         public Command CancelCommand { get; }
 
@@ -62,7 +69,8 @@ namespace AppFlyout.ViewModels
                 Id = Guid.NewGuid().ToString(),
                 Nome = Nome,
                 Sinopse = Sinopse,
-                Ano = Ano
+                Ano = Ano,
+                QtdOscars = QtdOscars
             };
 
             await DataStore.AddItemAsync(newItem);
