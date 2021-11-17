@@ -9,7 +9,7 @@ namespace AppFlyout.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Sobre";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 
